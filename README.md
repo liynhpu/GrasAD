@@ -11,16 +11,8 @@ Here, "celeba" represents the dataset name, "grasad" is the algorithm name, "vgg
 ### Datasets
 The available dataset options are leaf_celeba, leaf_femnist, leaf_synthetic, celeba, femnist, and synthetic. Datasets with "leaf" in their names (e.g. leaf_celeba) allow modification of data non-independent and identically distributed properties; otherwise (e.g. celeba), the official data splitting method is used.
 ### Comparable Algorithms
-Algorithm names include usrsele_compa_grasad, usrsele_compa_aouprior, usrsele_compa_schandagg, usrsele_compa_hfl, usrsele_compa_kafl, etc. When using an algorithm, set the corresponding parameter value in the yaml file to True. Note that each time you use an algorithm, you must ensure that asy.use == True to confirm asynchronous federated updates. 
-For example, when using the GrasAD algorithm, you must set:
-
-asy:
-
-use: True
-
-usrsele_compa_hfl:
-
-use: True
+Algorithm names include usrsele_compa_grasad, usrsele_compa_aouprior, usrsele_compa_schandagg, usrsele_compa_hfl, usrsele_compa_kafl, etc. When using an algorithm, set the corresponding parameter value in the yaml file to True. Note that each time you use an algorithm, you must ensure that "asy.use == True" to confirm asynchronous federated updates. 
+For example, when using the GrasAD algorithm, you must set: "asy.use == True", "usrsele.use == True". When using the HFL algorithm, you must set: "asy.use == True", "usrsele_compa_hfl:.use == True"
 
 # Acknowledgement
 We would like to thank the authors for releasing the public repository: FederatedScope-LLM.
